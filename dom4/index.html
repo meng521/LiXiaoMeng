@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="box">
+        <form action="">
+            <div class="text">
+                <p>只看免预约</p>
+                <div class="toggle-radio">
+                    <input type="checkbox" id="rd133">
+                    <label class="track" for="rd133">
+                        <i class="icon">✔</i>
+                    </label>
+                </div>
+            </div>
+            <div class="text">
+                <p>只看免预约</p>
+                <div class="toggle-radio">
+                    <input type="checkbox" id="rd11">
+                    <label class="track" for="rd11">
+                        <span class="icon">✔</span>
+                    </label>
+                </div>
+            </div>
+            <h3>用餐人数</h3>
+            <ul class="list">
+                <li>不限</li>
+                <li>单人餐</li>
+                <li>双人餐</li>
+                <li>3~4人餐</li>
+                <li>5~10人餐</li>
+                <li>10人以上</li>
+                <li>代金卷</li>
+                <li>其他</li>
+            </ul>
+            <div class="bottom">
+                <button class="reset">重置</button>
+                <button class="hold">保存</button>
+            </div>
+        </form>
+    </div>
+    <script src="jquery-1.8.3.min.js"></script>
+    <script>
+        $('.list').on('click','li',function(){
+            $(this).addClass('active').siblings().removeClass('active');
+        });
+        $('.reset').on('click',function(){
+            $('.icon').hide();
+            $('.list').children('li').removeClass('active');
+        });
+        $('.hold').on('click',function(){
+            var obj={}
+        })
+    </script>
+</body>
+</html>
